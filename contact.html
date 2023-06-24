@@ -67,6 +67,75 @@
         </nav>
     </header>
 
+    <section class="container">
+        <div class="flex-container">
+            <form class="flex-item-left">
+                <h1>Send Us A <span>Message!</span></h1>
+                <div class="contact-form">
+                    <label for="input-name">Full Name</label>
+                    <br/>
+                    <input type="text" name="full-name" placeholder="John Doe" id="input-name" required/>
+                    <br/>
+                    <br/>
+                    <label for="mobile">Mobile Number</label>
+                    <br/>
+                    <input type="tel" id="mobile" name="mobile" placeholder="09065784028" required>
+                    <br/>
+                    <br/>
+                    <label for="email-adress">Email Address</label>
+                    <br/>
+                    <input type="email" name="email-adress" id="email-adress" placeholder="e.g. johndoe@gmail.com" required/>
+                    <br/>
+                    <br/>
+                    <p>Subject</p>
+                    <select name="subject" id="subject" required>
+                        <option value="" disabled selected>Select a Subject</option>
+                        <option value="inquiry">Inquiry</option>
+                        <option value="i need a technician">I need a Technician</option>
+                        <option value="about my service request">About my service request</option>
+                        <option value="i need to reach your management">I need to reach your management</option>
+                    </select>
+                    <br/>
+                    <br/>
+                    <label for="message">Message</label>
+                    <br/>
+                    <textarea name="Your Message" id="your message" cols="35" rows="10" placeholder="Your Message" required></textarea>
+                    <br/>
+                    <br/>
+                    <input class="btn btn-primary btn-sm" type="submit" value="Send">
+                </div>  
+            </form>
+            <div class="flex-item-right">
+                <div class="card" style="width: 100%;">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3867.656537115021!2d121.17162423904755!3d14.214878156130345!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x33bd6180c95ef9c1%3A0xc3dc054531cea333!2s80%20San%20Juan%20Rd%2C%20Calamba%2C%204027%20Laguna!5e0!3m2!1sen!2sph!4v1687574701185!5m2!1sen!2sph" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    <div class="card-body">
+                      <h5 class="card-title">Coverage Area</h5>
+                      <p class="card-text">Metro Manila, Laguna, Cavite <br/> More areas covered soon!</p>
+    
+                      <h5 class="card-title">Contact</h5>
+                      <p>Online Booking</p>
+                      <span><b>24/7</b></span>
+                      <br/>
+                      <p>Business Hours</p>
+                      <span><b>Mon - Sun | 9AM - 6PM</b></span>
+                      <br/>
+                      <p>Telephone</p>
+                      <span><b>(049) 545 8752</b></span>
+                      <br/>
+                      <a href="#" class="btn btn-primary">Book a service anytime</a>
+                      <br/>
+                      <br/>
+                      <p >Please send us your questions and feedback via this form or to <a class="link link-blue" href="mailto:blizzardtech@gmail.com">blizzardtech@gmail.com</a></p>
+                      <p>80 San Juan Road, Calamba City, Laguna 4027</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+
     
 </body>
 </html>
