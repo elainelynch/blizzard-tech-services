@@ -30,6 +30,123 @@
             border-radius: 5px;
         }
 
+        body .container {
+            display: grid;
+            justify-content: end;
+            align-content: center;
+            min-height: 30vh;
+        }
+
+        footer {
+            position: relative;
+            width : 100%;
+            height: auto;
+            padding: 20px;
+            background: #000D28;
+        }
+
+        footer .container {
+            width: 100%;
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            grid-gap: 20px;
+        }
+
+        footer .container .sec h2 {
+            position: relative;
+            color: #DAFFFB;
+            margin-bottom: 15px;
+        }
+
+        footer .container .sec h2::before {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 50px;
+            height: 2px;
+            background: #64CCC5;
+        }
+
+        footer .container .sec p {
+            color: #DAFFFB;
+        }
+
+        .sci {
+            margin-top: 20px;
+            display: grid;
+            grid-template-columns: repeat(4, 50px);
+            grid-gap: 10px;
+            padding-left: 0;
+        }
+
+        .sci li {
+            list-style: none;
+        }
+
+        .sci li a {
+            background:#64CCC5;
+            display: inline-block;
+            width: 48px;
+            height: 48px;
+            display: grid;
+            align-content: center;
+            justify-content: center;
+            text-decoration: none;
+            border-radius: 4px;
+        }
+
+        .sci li a .fa {
+            color: #000D28;
+            font-size: 20px;
+        }
+
+        .sci li a .fa:hover {
+            color: #176B87;
+        }
+
+        .info {
+            position: relative;
+           padding-left: 0;
+        }
+
+        .info li {
+            display: grid;
+            grid-template-columns: 30px 1fr ;
+            margin-bottom: 16px;
+        }
+
+        .info li span:nth-child(1) {
+            color:#176B87;
+            font-size: 20px;
+        }
+
+        .info li span {
+            color:#DAFFFB;
+        }
+
+        .info a {
+            color: #DAFFFB;
+            text-decoration: none;
+        }
+
+        .info a:hover {
+            color:#64CCC5;
+        }
+
+        .copyrightText {
+            width: 100%;
+            background-color: #176B87;
+            padding: 10px 40px .3px 40px;
+            text-align: center;
+            color: #DAFFFB;
+        }
+
+        @media screen and (max-width: 441px) {
+            footer .container {
+                grid-template-columns:1fr;
+            }
+        }
     </style>
 </head>
 <body>
@@ -108,6 +225,49 @@
             </button>
           </div>
     </section>
+
+    <footer>
+        <div class="container">
+            <div class="sec aboutus">
+                <h2>About Us</h2>
+                <p>Blizzard Tech Services is a technology startup innovating <br/>the appliance service industry. We provide a sophisticated <br/>platform which enables users to easily book a professional<br/> technician at any time and from anywhere.</p>
+                <ul class="sci">
+                    <li><a href="https://www.gmail.com"><i class="fa fa-solid fa-envelope"></i></a></li>
+                    <li><a href="https://www.facebook.com"><i class="fa fa-brands fa-facebook"></i></a></li>
+                    <li><a href="https://www.instagram.com"><i class="fa fa-brands fa-instagram"></i></a></li>
+                    <li><a href="https://www.tiktok.com"><i class="fa fa-brands fa-tiktok"></i></a></li>
+                </ul>
+            </div>
+
+            <div class="sec contact">
+                <h2>Contact Us</h2>
+                <ul class="info">
+                    <li>
+                        <span><i class="fa-solid fa-location-dot"></i></span>
+                        <span>
+                            80 San Juan Road,<br/> Calamba City, Laguna 4027
+                        </span>
+                    </li>
+                    <li>
+                        <span><i class="fa-solid fa-phone"></i></span>
+                        <p>
+                           <a href="tel:+63 9272855026">+63 9272855026</a><br/>
+                           <a href="tel:(049) 545 8752">(049) 545 8752</a>
+                        </p>
+                    </li>
+                    <li>
+                        <span><i class="fa-solid fa-envelope"></i></span>
+                        <p>
+                            <a href="mailto:blizzardtech@gmail.com">blizzardtech@gmail.com</a>
+                        </p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+    <div class="copyrightText">
+        <p>Copyright © 2023 Blizzard Tech Services. All Rights Reserved.</p>
+    </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
 </body>
 </html>
