@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Booking Page</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+
+        body {
+            background-color: #DAFFFB;
+        }
+
+        header .container-fluid {
+            background-color: #000D28;
+        }
+
+        .section {
+            background-color: #DAFFFB;
+        }
+
+        .nav-link {
+            color: #64CCC5;
+        }
+
+        .nav-link:hover {
+            color: #176B87;
+            border: 2px solid #176B87;
+            border-radius: 5px;
+        }
+
+        .flex-container {
+            display: flex;
+            flex-direction: row;
+            padding-top: 2.5em;
+            padding-bottom:  3.5em;
+        }
+
+        .flex-item-left {
+            flex: 50%;
+            background-color:   #64CCC5;
+            border-top-left-radius: 10px;
+            border-bottom-left-radius: 10px;
+            color:  #176B87;
+            margin-top: 15px;
+            padding: 20px;
+            padding-right: 20px;  
+        }
+
+        .flex-item-left span {
+            color:  #001C30;
+        }
+
+        .flex-item-left span:hover {
+            color:  #176B87;
+        }
+
+        .contact-form {
+            color: #001C30;
+            padding-left: 5px;
+            padding-right: 5px;
+        }
+
+
+        .flex-item-right {
+            flex: 50%;
+            border-top-right-radius: 10px;
+            border-bottom-right-radius: 10px;
+            margin-top: 15px;
+            font-size: 50px;
+            text-align: center;
+        }
+
+        .flex-item-right span {
+            display: flex;
+            justify-content: start;
+        }
+
+        body .container {
+            display: grid;
+            justify-content: end;
+            align-content: center;
+            min-height: 30vh;
+        }
+
+        footer {
+            position: relative;
+            width : 100%;
+            height: auto;
+            padding: 20px;
+            background: #000D28;
+        }
+
+        footer .container {
+            width: 100%;
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            grid-gap: 20px;
+        }
+
+        footer .container .sec h2 {
+            position: relative;
+            color: #DAFFFB;
+            margin-bottom: 15px;
+        }
+
+        footer .container .sec h2::before {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 50px;
+            height: 2px;
+            background: #64CCC5;
+        }
+
+        footer .container .sec p {
+            color: #DAFFFB;
+        }
+
+        .sci {
+            margin-top: 20px;
+            display: grid;
+            grid-template-columns: repeat(4, 50px);
+            grid-gap: 10px;
+            padding-left: 0;
+        }
+
+        .sci li {
+            list-style: none;
+        }
+
+        .sci li a {
+            background:#64CCC5;
+            display: inline-block;
+            width: 48px;
+            height: 48px;
+            display: grid;
+            align-content: center;
+            justify-content: center;
+            text-decoration: none;
+            border-radius: 4px;
+        }
+
+        .sci li a .fa {
+            color: #000D28;
+            font-size: 20px;
+        }
+
+        .sci li a .fa:hover {
+            color: #176B87;
+        }
+
+        .info {
+            position: relative;
+           padding-left: 0;
+        }
+
+        .info li {
+            display: grid;
+            grid-template-columns: 30px 1fr ;
+            margin-bottom: 16px;
+        }
+
+        .info li span:nth-child(1) {
+            color:#176B87;
+            font-size: 20px;
+        }
+
+        .info li span {
+            color:#DAFFFB;
+        }
+
+        .info a {
+            color: #DAFFFB;
+            text-decoration: none;
+        }
+
+        .info a:hover {
+            color:#64CCC5;
+        }
+
+        .copyrightText {
+            width: 100%;
+            background-color: #176B87;
+            padding: 10px 40px .3px 40px;
+            text-align: center;
+            color: #DAFFFB;
+        }
+
+        @media screen and (max-width: 768px) {
+            footer .container {
+                grid-template-columns:1fr;
+            }
+        }
+
+        @media (max-width: 1400px) {
+            .flex-container {
+            flex-direction: column;
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg">
+            <div class="container-fluid">
+                <div class="navbar-brand">
+                    <img src="photos/logo.jpg" alt="website-logo" width="150px" height="150px"> 
+                </div>
+
+                <button class="navbar-toggler bg-info" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon btn btn-sm align-items-end bg-info"></span>
+                </button>
+
+                <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a href="index.html" class="nav-link">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="about.html" class="nav-link">About</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="services.html" class="nav-link">Services</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="testimonials.html" class="nav-link">Testimonials</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="contact.html" class="nav-link">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <section class="container-fluid">
+        <div class="flex-container">
+            <form class="flex-item-left">
+                <h1>Book A <span>Service Now!</span></h1>
+                <div class="contact-form">
+                    <label for="input-name">Full Name</label>
+                    <br/>
+                    <input type="text" name="full-name" placeholder="John Doe" id="input-name" required/>
+                    <br/>
+                    <br/>
+                    <label for="mobile">Mobile Number</label>
+                    <br/>
+                    <input type="tel" id="mobile" name="mobile" placeholder="09065784028" required>
+                    <br/>
+                    <br/>
+                    <label for="email-adress">Email Address</label>
+                    <br/>
+                    <input type="email" name="email-adress" id="email-adress" placeholder="e.g. johndoe@gmail.com" required/>
+                    <br/>
+                    <br/>
+                    <p>Services</p>
+                    <select name="subject" id="subject" required>
+                        <option value="" disabled selected>What type of Service?</option>
+                        <option value="cleaning-maintenance">Cleaning & Maintenance</option>
+                        <option value="check-up-repair">Check-up & Repair</option>
+                        <option value="installation">Installation</option>
+                        <option value="dismantling-relocation">Dismantling & Relocation</option>
+                    </select>
+                    <br/>
+                    <br/>
+                    <p>Aircon</p>
+                    <select name="subject" id="subject" required>
+                        <option value="" disabled selected>What type of Aircon?</option>
+                        <option value="window-type">Window Type</option>
+                        <option value="split-type">Split Type</option>
+                        <option value="tower-type">Tower Type</option>
+                        <option value="cassette-type">Cassette Type</option>
+                        <option value="suspended-type">Suspended Type</option>
+                        <option value="concealed-type">Concealed Type</option>
+                        <option value="u-shaped-window-type">U-shaped Window Type</option>
+                    </select>
+                    <br/>
+                    <br/>
+                    <label for="book-date">Select a Date</label>
+                    <br/>
+                    <input type="date" name="book-date" id="book-date" required/>
+                    <br/>
+                    <br/>
+                    <label for="country">Location</label>
+                    <select id="country" name="country" required>
+                    <option value="" disabled selected>Select your Location</option>
+                    <option value="australia">Metro Manila</option>
+                    <option value="canada">Laguna</option>
+                    <option value="usa">Cavite</option>
+                    </select>
+                    <br/>
+                    <br/>
+                    <label for="address">Complete Address</label>
+                    <br/>
+                    <textarea name="kindly provide your complete address" id="kindly provide your complete address" cols="35" rows="5" placeholder="Kindly provide your complete address" required></textarea>
+                    <br/>
+                    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                        Book Now
+                    </button>
+                    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div class="modal-dialog">
+                          <div class="modal-content">
+                            <div class="modal-header">
+                              <h1 class="modal-title fs-5" id="exampleModalLabel">Thank you!</h1>
+                              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                Your details has been successfully submitted. We'll get back to you.
+                            </div>
+                          </div>
+                        </div>
+                    </div>
+                </div>  
+            </form>
+            <div class="flex-item-right">
+                <div class="card" style="width: 100%;">
+                    <img src="photos/technician.jpg">
+                    <p>"Keeping You Cool and Comfortable" <br/> Book Your Air Conditioning Services Today!</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="sec aboutus">
+                <h2>About Us</h2>
+                <p>Blizzard Tech Services is a technology startup innovating the appliance service industry. We provide a sophisticated platform which enables users to easily book a professional technician at any time and from anywhere.</p>
+                <ul class="sci">
+                    <li><a href="https://www.gmail.com"><i class="fa fa-solid fa-envelope"></i></a></li>
+                    <li><a href="https://www.facebook.com"><i class="fa fa-brands fa-facebook"></i></a></li>
+                    <li><a href="https://www.instagram.com"><i class="fa fa-brands fa-instagram"></i></a></li>
+                    <li><a href="https://www.tiktok.com"><i class="fa fa-brands fa-tiktok"></i></a></li>
+                </ul>
+            </div>
+
+            <div class="sec contact">
+                <h2>Contact Us</h2>
+                <ul class="info">
+                    <li>
+                        <span><i class="fa-solid fa-location-dot"></i></span>
+                        <span>
+                            80 San Juan Road,<br/> Calamba City, Laguna 4027
+                        </span>
+                    </li>
+                    <li>
+                        <span><i class="fa-solid fa-phone"></i></span>
+                        <p>
+                           <a href="tel:+63 9272855026">+63 9272855026</a><br/>
+                           <a href="tel:(049) 545 8752">(049) 545 8752</a>
+                        </p>
+                    </li>
+                    <li>
+                        <span><i class="fa-solid fa-envelope"></i></span>
+                        <p>
+                            <a href="mailto:blizzardtech@gmail.com">blizzardtech@gmail.com</a>
+                        </p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+    <div class="copyrightText">
+        <p>Copyright © 2023 Blizzard Tech Services. All Rights Reserved.</p>
+    </div>
+
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+
+    
+</body>
+</html>
